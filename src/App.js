@@ -1,13 +1,13 @@
-import Header from './components'
 import './App.css';
+import Header from './components/Header';
+import Login from './components/Login';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img 
-    </div>
-  );
+export default function App() {
+  return(
+  <>
+    <Header />
+    <Login />
+  
+  </>
+  )
 }
-
-export default App;

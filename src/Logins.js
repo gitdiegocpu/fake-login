@@ -1,13 +1,13 @@
-import {useState, useEffect} from ' react '
+import { useState, useEffect } from 'react'
 
 export default function login(){
     const [ isLoggedIn, setIsLoggedIn ] = useState (false)
     const [error, setError] = useState()
 
     useEffect(() => {
-    if(isLoggedIn) {
+    if(isLoggedIn) { 
         document.title = "Watch your back! "
-    } else{
+    } else {
         document.title = " Enter if you dare "
     }
     }, [isLoggedIn])
@@ -17,10 +17,10 @@ export default function login(){
         const email = e.target.email.value
         const password = e.target.password.value
         if(email === 'yourmama@gmail.com' && password === '123456'){
-            setIsloggedIn(true)
-            setErro()
+            setIsLoggedIn(true)
+            setError()
         } else {
-            seError('Invalid email or password')
+            setError('Invalid email or password')
         }
     }
 
@@ -35,7 +35,7 @@ export default function login(){
         )
     }
 
-    return (
+    return(
         <main>
             <h2>Login</h2>
             <section className="login-form">
@@ -48,16 +48,16 @@ export default function login(){
                         Password:
                         <input type="password" name="password"/>
                     </label>
+
                     { error &&
                     <p style={{color: 'red'}}>{error}</p>
                     }
                     
                     < input type = "submit" value = "Login " />
                 </form>
-          <section/>
+          </section>
         </main>
 
     )
-
-    }
+} 
     
